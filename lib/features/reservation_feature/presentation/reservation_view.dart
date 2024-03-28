@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/widgets/reservation_view_body.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({super.key});
+class ReservationView extends StatelessWidget {
+  const ReservationView({super.key});
 
   @override
   Widget build(BuildContext context) {

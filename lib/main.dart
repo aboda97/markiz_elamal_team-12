@@ -2,14 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
-import 'package:markiz_elamal_team_12/features/chats_feature/chats_view.dart';
-import 'package:markiz_elamal_team_12/features/notification_feature/notification_view.dart';
 import 'package:markiz_elamal_team_12/features/splash_feature/presentation/splash_view.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -42,7 +41,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home: const NotificationView(),
+        home: const SplashView(),
       ),
     );
   }

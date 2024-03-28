@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
+import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/widgets/available_doctor_list_view_item.dart';
 
 class ReservationViewBody extends StatefulWidget {
   const ReservationViewBody({super.key});
@@ -15,7 +17,7 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 35.0),
+      padding: const EdgeInsets.all(20.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -54,6 +56,7 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
               color: kPrimaryColor,
             ),
           ),
+          //--> Available Doctor Filter
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -90,7 +93,18 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
                 ),
               )
             ],
-          )
+          ),
+          //--> Available Doctor ListView
+          const SizedBox(
+            height: 35.0,
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (index, context) =>
+                  const AvailableDoctorListViewItem(),
+              itemCount: 10,
+            ),
+          ),
         ],
       ),
     );

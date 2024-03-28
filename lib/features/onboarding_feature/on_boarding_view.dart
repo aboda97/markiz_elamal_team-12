@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
-import 'package:markiz_elamal_team_12/features/auth_feature/presentation/login_view.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/presentation/widgets/on_boarding_view_body.dart';
+import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/reservation_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -32,7 +32,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return const LoginView();
+                  return const ReservationView();
                 }),
               );
             },

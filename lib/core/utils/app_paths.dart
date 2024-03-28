@@ -4,4 +4,5 @@ class AppPaths {
   static String onBoardingDateLogo = 'assets/images/date logo.png';
   static String onBoardingConnectionLogo = 'assets/images/connection logo.png';
   static String doctorImage = 'assets/images/doctorImage .png';
+  static String availableDoctorImage = 'assets/images/dr_osama.png';
 }
