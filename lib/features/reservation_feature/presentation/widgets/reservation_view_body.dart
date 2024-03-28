@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
+import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/widgets/available_doctor_grid_view_item.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/widgets/available_doctor_list_view_item.dart';
 
 class ReservationViewBody extends StatefulWidget {
@@ -96,12 +98,25 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
           ),
           //--> Available Doctor ListView
           const SizedBox(
-            height: 35.0,
+            height: 30.0,
           ),
+          // Expanded(
+          //   child: ListView.builder(
+          //     itemBuilder: (index, context) =>
+          //         const AvailableDoctorListViewItem(),
+          //     itemCount: 10,
+          //   ),
+          // ),
           Expanded(
-            child: ListView.builder(
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                childAspectRatio: .7,
+                crossAxisCount: 2, // Number of columns
+                crossAxisSpacing: 8.0, // Spacing between columns
+                mainAxisSpacing: 8.0, // Spacing between rows
+              ),
               itemBuilder: (index, context) =>
-                  const AvailableDoctorListViewItem(),
+                  const AvailableDoctorGridViewItem(),
               itemCount: 10,
             ),
           ),
