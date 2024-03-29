@@ -1,6 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:easy_date_timeline/easy_date_timeline.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/widgets/available_doctor_grid_view_item.dart';
@@ -14,10 +13,12 @@ class ReservationViewBody extends StatefulWidget {
 }
 
 class _ReservationViewBodyState extends State<ReservationViewBody> {
+  bool filterCategory = false;
   final EasyInfiniteDateTimelineController _controller =
       EasyInfiniteDateTimelineController();
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: Column(
@@ -78,17 +79,26 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
                 child: Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
+                      onPressed: () {
+                        setState(() {
+                          filterCategory = false;
+                        });
+                      },
+                      icon: Icon(
                         Icons.grid_view_outlined,
-                        color: kPrimaryColor,
+                        color:
+                            !filterCategory ? kPrimaryColor : kSecondaryColor,
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
+                      onPressed: () {
+                        setState(() {
+                          filterCategory = true;
+                        });
+                      },
+                      icon: Icon(
                         Icons.sort,
-                        color: kPrimaryColor,
+                        color: filterCategory ? kPrimaryColor : kSecondaryColor,
                       ),
                     ),
                   ],
@@ -100,26 +110,28 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
           const SizedBox(
             height: 30.0,
           ),
-          // Expanded(
-          //   child: ListView.builder(
-          //     itemBuilder: (index, context) =>
-          //         const AvailableDoctorListViewItem(),
-          //     itemCount: 10,
-          //   ),
-          // ),
-          Expanded(
-            child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: .7,
-                crossAxisCount: 2, // Number of columns
-                crossAxisSpacing: 8.0, // Spacing between columns
-                mainAxisSpacing: 8.0, // Spacing between rows
-              ),
-              itemBuilder: (index, context) =>
-                  const AvailableDoctorGridViewItem(),
-              itemCount: 10,
-            ),
-          ),
+          filterCategory
+              ? Expanded(
+                  child: ListView.builder(
+                    itemBuilder: (index, context) =>
+                        const AvailableDoctorListViewItem(),
+                    itemCount: 10,
+                  ),
+                )
+              : Expanded(
+                  child: GridView.builder(
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                      childAspectRatio: .7,
+                      crossAxisCount: 2, // Number of columns
+                      crossAxisSpacing: 8.0, // Spacing between columns
+                      mainAxisSpacing: 8.0, // Spacing between rows
+                    ),
+                    itemBuilder: (index, context) =>
+                        const AvailableDoctorGridViewItem(),
+                    itemCount: 10,
+                  ),
+                ),
         ],
       ),
     );
