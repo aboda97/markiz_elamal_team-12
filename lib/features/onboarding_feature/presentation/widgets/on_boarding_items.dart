@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/global_variables.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/data/models/on_boarding_model.dart';
@@ -14,60 +15,62 @@ class OnBoardingItems extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          flex: 5,
+          // flex: 5,
           child: Image.asset(
             onBoardingModel.onBoardingImg,
           ),
         ),
         Expanded(
-          flex: 4,
+          // flex: 4,
           child: Container(
-            decoration: const BoxDecoration(
+            decoration:  BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(35.0),
-                topRight: Radius.circular(35.0),
+                topLeft: Radius.circular(35.0.r),
+                topRight: Radius.circular(35.0.r),
               ),
             ),
             child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 40.0,
+              padding:  EdgeInsets.symmetric(
+                horizontal: 20.0.w,
+                vertical: 40.0.h,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     onBoardingModel.onBoardingTitle,
-                    style: const TextStyle(
-                        fontSize: 24.0,
+                    style:  TextStyle(
+                        fontSize: 24.0.sp,
                         fontWeight: FontWeight.w600,
                         color: kPrimaryColor),
                   ),
-                  const SizedBox(
-                    height: 30.0,
+                   SizedBox(
+                    height: 30.0.h,
                   ),
+                  // const Spacer(),
                   Text(
                     onBoardingModel.onBoardingSubTitle,
-                    style: const TextStyle(
-                        fontSize: 18.0,
+                    style:  TextStyle(
+                        fontSize: 18.0.sp,
                         fontWeight: FontWeight.w500,
                         color: kPrimaryColor),
                   ),
-                  const SizedBox(
-                    height: 40.0,
-                  ),
+                  //  SizedBox(
+                  //   height: 40.0.h,
+                  // ),
+                  const Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SmoothPageIndicator(
                           controller: onBoardingController,
-                          effect: const ExpandingDotsEffect(
+                          effect:  ExpandingDotsEffect(
                             dotColor: kSecondaryColor,
                             activeDotColor: kPrimaryColor,
-                            dotHeight: 12.0,
-                            dotWidth: 10.0,
-                            spacing: 5.0,
+                            dotHeight: 12.0.h,
+                            dotWidth: 10.0.w,
+                            spacing: 5.0.w,
                             expansionFactor: 4.0,
                           ),
                           count: items.length),
@@ -87,13 +90,13 @@ class OnBoardingItems extends StatelessWidget {
                                 duration: const Duration(milliseconds: 350),
                                 curve: Curves.easeIn);
                           },
-                          icon: const Icon(
+                          icon:  Icon(
                             Icons.arrow_back,
-                            size: 32,
+                            size: 32.sp,
                           ),
-                          label: const Text(
+                          label:  Text(
                             'Next',
-                            style: TextStyle(fontSize: 20.0),
+                            style: TextStyle(fontSize: 20.0.sp),
                           ),
                         ),
                       ),
