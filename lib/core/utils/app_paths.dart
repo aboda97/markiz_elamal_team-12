@@ -8,4 +8,5 @@ class AppPaths {
   static String masterCardLogo = 'assets/images/master card logo.png';
   static String visaLogo = 'assets/images/visa logo.png';
   static String cashLogo = 'assets/images/cash logo.jpeg';
+  static String logoutImage = 'assets/images/ammar.png';
 }
