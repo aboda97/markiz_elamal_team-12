@@ -23,10 +23,10 @@ class PaymentMethodItem extends StatelessWidget {
       children: [
         (isSelected)
             ? TweenAnimationBuilder(
-           duration: const Duration(milliseconds:250),
-             tween:Tween<double>(begin: 0, end: 20.h) ,
-             builder: (context, value, child) =>  SizedBox(
-                  height: value*2,
+                duration: const Duration(milliseconds: 250),
+                tween: Tween<double>(begin: 0, end: 20.h),
+                builder: (context, value, child) => SizedBox(
+                  height: value * 2,
                   child: Text("Current Method",
                       style: GoogleFonts.poppins(
                         color: kSecondaryColor,
@@ -34,8 +34,15 @@ class PaymentMethodItem extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                       )),
                 ),
-            )
-            : const SizedBox(),
+              )
+            : TweenAnimationBuilder(
+                tween: Tween<double>(begin: 20.h, end: 0),
+                duration: const Duration(milliseconds: 250),
+                builder: (BuildContext context, double value, Widget? child) =>
+                    SizedBox(
+                  height: value * 2,
+                ),
+              ),
         Container(
           padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 13.w),
           decoration: BoxDecoration(

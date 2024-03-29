@@ -20,11 +20,13 @@ class _PaymentMethodViewState extends State<PaymentMethodView> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
+          splashColor: Colors.transparent,
           icon: const Icon(Icons.close),
           onPressed: () {},
         ),
         actions: [
           InkWell(
+            splashColor: Colors.transparent,
               onTap: () {},
               child: Text(
                 "Add",
