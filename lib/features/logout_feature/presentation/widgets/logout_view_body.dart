@@ -48,8 +48,8 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
               ),
             ),
             Container(
-              height: 300,
-              width: 388,
+              // height: 300,
+              // width: 388, // when we determine width and height it mak render error
               decoration: const BoxDecoration(
                 color: kLogoutConColor,
                 borderRadius: BorderRadius.all(Radius.circular(30)),
