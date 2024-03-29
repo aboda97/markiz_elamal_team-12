@@ -5,5 +5,8 @@ class AppPaths {
   static String onBoardingConnectionLogo = 'assets/images/connection logo.png';
   static String doctorImage = 'assets/images/doctorImage .png';
   static String availableDoctorImage = 'assets/images/dr_osama.png';
+  static String masterCardLogo = 'assets/images/master card logo.png';
+  static String visaLogo = 'assets/images/visa logo.png';
+  static String cashLogo = 'assets/images/cash logo.jpeg';
   static String logoutImage = 'assets/images/ammar.png';
 }
