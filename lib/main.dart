@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/features/splash_feature/presentation/splash_view.dart';
 
+import 'features/massage_doctor_feature/massage_doctore_view.dart';
 import 'features/pyment_methods_feature/pyment_method_view.dart';
 
 void main() async {
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        home:  const SplashView(),
+        home:   MassageDoctorView(),
       ),
     );
   }
