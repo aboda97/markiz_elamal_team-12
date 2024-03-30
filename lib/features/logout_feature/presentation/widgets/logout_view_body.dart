@@ -18,12 +18,12 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.only(top: 30, bottom: 15),
+              padding: EdgeInsets.only(top: 60, bottom: 15),
               child: Text(
                 "Profile",
                 style: TextStyle(
                   color: kLogoutTextColor,
-                  fontSize: 26,
+                  fontSize: 24,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -33,7 +33,11 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
               child: CircleAvatar(
                 radius: 66,
                 backgroundColor: kPrimaryColor,
-                child: Image.asset(AppPaths.logoutImage),
+                child: Image.asset(
+                  AppPaths.logoutImage,
+                  height: 99,
+                  width: 106,
+                ),
               ),
             ),
             const Padding(
@@ -42,34 +46,35 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                 "Ammar Ahmed",
                 style: TextStyle(
                   color: kLogoutTextColor,
-                  fontSize: 24,
+                  fontSize: 22,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
             Container(
-              // height: 300,
-              // width: 388, // when we determine width and height it mak render error
+              height: 350,
+              width: 360,
+
               decoration: const BoxDecoration(
                 color: kLogoutConColor,
                 borderRadius: BorderRadius.all(Radius.circular(30)),
               ),
               child: Column(
                 children: [
-                  const SizedBox(height: 25),
+                  const SizedBox(height: 45),
                   const Text(
                     'See You Soon',
                     style: TextStyle(
-                      fontSize: 40,
+                      fontSize: 30,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const SizedBox(height: 15),
+                  const SizedBox(height: 20),
                   const Text(
                     'You are about to logout.',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
@@ -77,7 +82,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                   const Text(
                     'Are you sure this is what',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
@@ -85,7 +90,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                   const Text(
                     'you want ?',
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
@@ -94,18 +99,19 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(width: 42),
+                      const SizedBox(width: 28),
                       const Text(
                         'Cancel',
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 20,
                           fontWeight: FontWeight.w700,
                           color: kWhiteColor,
                         ),
                       ),
-                      const SizedBox(width: 42),
+                      const SizedBox(width: 28),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
+                          fixedSize: const Size(213, 45),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
                           ),
@@ -124,18 +130,17 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                   ),
                   Row(
                     children: [
-                      const SizedBox(width: 38),
+                      const SizedBox(width: 16),
                       Checkbox(
                         activeColor: kWhiteColor,
                         checkColor: kBlackColor,
                         value: true,
                         onChanged: (value) {},
                       ),
-                      const SizedBox(width: 5),
                       const Text(
                         'Logout from all devices',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500,
                           color: kWhiteColor,
                         ),
