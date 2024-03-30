@@ -54,6 +54,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
             Container(
               height: 350,
               width: 360,
+
               decoration: const BoxDecoration(
                 color: kLogoutConColor,
                 borderRadius: BorderRadius.all(Radius.circular(30)),
