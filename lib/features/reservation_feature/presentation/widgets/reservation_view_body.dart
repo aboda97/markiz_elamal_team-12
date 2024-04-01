@@ -13,7 +13,7 @@ class ReservationViewBody extends StatefulWidget {
 }
 
 class _ReservationViewBodyState extends State<ReservationViewBody> {
-  bool filterCategory = false;
+  bool filterCategory = true;
   final EasyInfiniteDateTimelineController _controller =
       EasyInfiniteDateTimelineController();
   @override
@@ -125,7 +125,7 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
                     physics: const NeverScrollableScrollPhysics(),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      childAspectRatio: .7,
+                      childAspectRatio: .6,
                       crossAxisCount: 2, // Number of columns
                       crossAxisSpacing: 8.0, // Spacing between columns
                       mainAxisSpacing: 8.0, // Spacing between rows
