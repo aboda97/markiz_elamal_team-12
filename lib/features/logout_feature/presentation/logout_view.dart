@@ -13,7 +13,7 @@ class _LogoutViewState extends State<LogoutView> {
 
   @override
   Widget build(BuildContext context) {
-    return   LogoutViewBody();
+    return   const LogoutViewBody();
   }
 }
 
