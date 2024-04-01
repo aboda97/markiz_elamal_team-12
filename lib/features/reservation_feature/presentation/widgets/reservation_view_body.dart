@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
@@ -22,105 +21,108 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
     ScreenUtil.init(context);
     return Padding(
       padding: const EdgeInsets.all(20.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          //--> Date Choosen
-          const Text(
-            'October  2,2024',
-            style: TextStyle(
-                fontSize: 22.0,
-                fontWeight: FontWeight.w700,
-                color: kPrimaryColor),
-          ),
-          //--> Calender to select Date
-          EasyDateTimeLine(
-            initialDate: DateTime.now(),
-            onDateChange: (selectedDate) {
-              //`selectedDate` the new date selected.
-            },
-            activeColor: kPrimaryColor,
-            headerProps: const EasyHeaderProps(
-                //  monthPickerType: MonthPickerType.switcher,
-                padding: EdgeInsets.only(top: 20.0, bottom: 15.0),
-                showMonthPicker: false,
-                selectedDateStyle: TextStyle(
-                    color: kPrimaryColor,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.w600)),
-            dayProps: const EasyDayProps(
-              todayHighlightStyle: TodayHighlightStyle.withBackground,
-              todayHighlightColor: kSecondaryColor,
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            //--> Date Choosen
+            const Text(
+              'October  2,2024',
+              style: TextStyle(
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.w700,
+                  color: kPrimaryColor),
             ),
-          ),
-          //--> Divider
-          const Padding(
-            padding: EdgeInsets.symmetric(vertical: 15.0),
-            child: Divider(
-              color: kPrimaryColor,
-            ),
-          ),
-          //--> Available Doctor Filter
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Available Doctor',
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w500,
-                  color: kPrimaryColor,
-                ),
+            //--> Calender to select Date
+            EasyDateTimeLine(
+              initialDate: DateTime.now(),
+              onDateChange: (selectedDate) {
+                //`selectedDate` the new date selected.
+              },
+              activeColor: kPrimaryColor,
+              headerProps: const EasyHeaderProps(
+                  //  monthPickerType: MonthPickerType.switcher,
+                  padding: EdgeInsets.only(top: 20.0, bottom: 15.0),
+                  showMonthPicker: false,
+                  selectedDateStyle: TextStyle(
+                      color: kPrimaryColor,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w600)),
+              dayProps: const EasyDayProps(
+                todayHighlightStyle: TodayHighlightStyle.withBackground,
+                todayHighlightColor: kSecondaryColor,
               ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20.0),
-                  color: kSecondaryColor.withOpacity(.5),
+            ),
+            //--> Divider
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 15.0),
+              child: Divider(
+                color: kPrimaryColor,
+              ),
+            ),
+            //--> Available Doctor Filter
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Available Doctor',
+                  style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.w500,
+                    color: kPrimaryColor,
+                  ),
                 ),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        setState(() {
-                          filterCategory = false;
-                        });
-                      },
-                      icon: Icon(
-                        Icons.grid_view_outlined,
-                        color:
-                            !filterCategory ? kPrimaryColor : kSecondaryColor,
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: kSecondaryColor.withOpacity(.5),
+                  ),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        onPressed: () {
+                          setState(() {
+                            filterCategory = false;
+                          });
+                        },
+                        icon: Icon(
+                          Icons.grid_view_outlined,
+                          color:
+                              !filterCategory ? kPrimaryColor : kSecondaryColor,
+                        ),
                       ),
-                    ),
-                    IconButton(
-                      onPressed: () {
-                        setState(() {
-                          filterCategory = true;
-                        });
-                      },
-                      icon: Icon(
-                        Icons.sort,
-                        color: filterCategory ? kPrimaryColor : kSecondaryColor,
+                      IconButton(
+                        onPressed: () {
+                          setState(() {
+                            filterCategory = true;
+                          });
+                        },
+                        icon: Icon(
+                          Icons.sort,
+                          color:
+                              filterCategory ? kPrimaryColor : kSecondaryColor,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-          //--> Available Doctor ListView
-          const SizedBox(
-            height: 30.0,
-          ),
-          filterCategory
-              ? Expanded(
-                  child: ListView.builder(
+                    ],
+                  ),
+                )
+              ],
+            ),
+            //--> Available Doctor ListView
+            const SizedBox(
+              height: 30.0,
+            ),
+            filterCategory
+                ? ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (index, context) =>
                         const AvailableDoctorListViewItem(),
                     itemCount: 10,
-                  ),
-                )
-              : Expanded(
-                  child: GridView.builder(
+                  )
+                : GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                       childAspectRatio: .7,
@@ -132,8 +134,8 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
                         const AvailableDoctorGridViewItem(),
                     itemCount: 10,
                   ),
-                ),
-        ],
+          ],
+        ),
       ),
     );
   }
