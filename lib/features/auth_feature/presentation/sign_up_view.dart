@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:markiz_elamal_team_12/features/auth_feature/presentation/widgets/sign-up_view_body.dart';
+import 'package:markiz_elamal_team_12/features/auth_feature/presentation/widgets/sign_up_view_body.dart';
 
 class SignUpView extends StatefulWidget {
   const SignUpView({super.key});
