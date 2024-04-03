@@ -22,6 +22,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
               child: Text(
                 "Profile",
                 style: TextStyle(
+                  fontFamily: 'Poppins',
                   color: kLogoutTextColor,
                   fontSize: 24,
                   fontWeight: FontWeight.w700,
@@ -46,13 +47,14 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                 "Ammar Ahmed",
                 style: TextStyle(
                   color: kLogoutTextColor,
+                  fontFamily: 'Poppins',
                   fontSize: 22,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
             Container(
-              height: 350,
+              height: 370,
               width: 360,
 
               decoration: const BoxDecoration(
@@ -65,6 +67,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                   const Text(
                     'See You Soon',
                     style: TextStyle(
+                      fontFamily: 'OleoScriptSwashCaps',
                       fontSize: 30,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
@@ -75,6 +78,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                     'You are about to logout.',
                     style: TextStyle(
                       fontSize: 20,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
@@ -83,6 +87,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                     'Are you sure this is what',
                     style: TextStyle(
                       fontSize: 20,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
@@ -91,11 +96,12 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                     'you want ?',
                     style: TextStyle(
                       fontSize: 20,
+                      fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 30),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -103,12 +109,13 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                       const Text(
                         'Cancel',
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w700,
                           color: kWhiteColor,
                         ),
                       ),
-                      const SizedBox(width: 28),
+                      const SizedBox(width: 20),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           fixedSize: const Size(213, 45),
@@ -120,7 +127,8 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                         child: const Text(
                           'Confirm logout',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 18,
+                            fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             color: kLogoutTextColor,
                           ),
@@ -128,6 +136,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 7),
                   Row(
                     children: [
                       const SizedBox(width: 16),
@@ -141,6 +150,7 @@ class _LogoutViewBodyState extends State<LogoutViewBody> {
                         'Logout from all devices',
                         style: TextStyle(
                           fontSize: 16,
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
                           color: kWhiteColor,
                         ),
