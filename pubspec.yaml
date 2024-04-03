@@ -40,6 +40,7 @@ dependencies:
   google_fonts: ^6.2.1
   flutter_screenutil: ^5.9.0
   easy_date_timeline: ^1.0.6
+  intl: ^0.19.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -81,6 +82,7 @@ flutter:
      - family: Poppins
        fonts:
          - asset: assets/fonts/Poppins-Regular.ttf
+
      - family: Peralta
        fonts:
          - asset: assets/fonts/Peralta-Regular.ttf
