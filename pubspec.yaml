@@ -82,6 +82,10 @@ flutter:
      - family: Poppins
        fonts:
          - asset: assets/fonts/Poppins-Regular.ttf
+
+     - family: Peralta
+       fonts:
+         - asset: assets/fonts/Peralta-Regular.ttf
   #         style: italic
      - family: OleoScriptSwashCaps
        fonts:
