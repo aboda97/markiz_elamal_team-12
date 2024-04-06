@@ -11,4 +11,6 @@ class AppPaths {
   static String logoutImage = 'assets/images/ammar.png';
   static String profileImage='assets/images/profileImage.png';
   static String popularDoctorImage='assets/images/popularDoctorImage.png';
+  static String filterIcon="assets/images/Frame 1963.png";
+  static String childImage="assets/images/Mask group.png";
 }

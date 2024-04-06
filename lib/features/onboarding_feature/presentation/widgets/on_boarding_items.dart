@@ -7,6 +7,8 @@ import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+import '../../../home_view/presentation/views/homescreen.dart';
+
 class OnBoardingItems extends StatelessWidget {
   const OnBoardingItems({super.key, required this.onBoardingModel});
   final OnBoardingModel onBoardingModel;
@@ -82,7 +84,7 @@ class OnBoardingItems extends StatelessWidget {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return const ReservationView();
+                                  return const HomeScreen();
                                 }),
                               );
                             }

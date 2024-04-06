@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:markiz_elamal/features/doctor_profile_feature/presentation/doctor_profile_view.dart';
-import 'package:markiz_elamal/features/doctors_category_feature/presentation/widgets/popular_doctor_card.dart';
-import 'package:markiz_elamal/features/doctors_category_feature/presentation/widgets/popular_doctor_list_view.dart';
+import 'package:markiz_elamal_team_12/features/doctors_category_feature/presentation/widgets/popular_doctor_list_view.dart';
 
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_paths.dart';
+import '../../doctor_profile_feature/presentation/doctor_profile_view.dart';
 import 'widgets/book_doctor_card.dart';
 
 class DoctorsCatedoryView extends StatelessWidget {
