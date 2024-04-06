@@ -10,10 +10,8 @@ class SignInView extends StatefulWidget {
 
 class _SignInViewState extends State<SignInView> {
   @override
-
   @override
   Widget build(BuildContext context) {
-    return   const SignInViewBody();
+    return const SignInViewBody();
   }
 }
-

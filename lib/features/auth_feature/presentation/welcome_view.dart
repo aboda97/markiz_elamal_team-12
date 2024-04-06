@@ -10,10 +10,8 @@ class WelcomeView extends StatefulWidget {
 
 class _WelcomeViewState extends State<WelcomeView> {
   @override
-
   @override
   Widget build(BuildContext context) {
-    return   const WelcomeViewBody();
+    return const WelcomeViewBody();
   }
 }
-

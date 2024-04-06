@@ -10,10 +10,8 @@ class SignUpView extends StatefulWidget {
 
 class _SignUpViewState extends State<SignUpView> {
   @override
-
   @override
   Widget build(BuildContext context) {
-    return   const SignUpViewBody();
+    return const SignUpViewBody();
   }
 }
-
