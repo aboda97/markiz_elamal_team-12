@@ -1,8 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_paths.dart';
+
+import '../components/bottom_dialog.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});
@@ -26,7 +29,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 30, left: 30, bottom: 200),
+                    padding: EdgeInsets.only(top: 30, left: 30, bottom: 245),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -53,12 +56,12 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                   ),
                   Container(
                     width: double.infinity,
-                    height: 514,
-                    decoration: const BoxDecoration(
+                    height: 515.h,
+                    decoration: BoxDecoration(
                       color: kWhiteColor,
                       borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(70),
-                        topLeft: Radius.circular(70),
+                        topRight: Radius.circular(70.r),
+                        topLeft: Radius.circular(70.r),
                       ),
                     ),
                     child: Padding(
@@ -78,7 +81,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8.w),
                           InkWell(
                             child: const Text(
                               'Sign In',
@@ -100,15 +103,15 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
             ),
             Positioned(
               bottom: 65,
-              left: 35,
+              left: 49,
               child: Container(
-                width: 325,
-                height: 585,
+                width: 325.w,
+                height: 630.h,
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.r),
                   border: Border.all(
-                    width: 8,
+                    width: 8.w,
                     color: kWhiteColor,
                   ),
                 ),
@@ -117,10 +120,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                     children: [
                       Image.asset(
                         AppPaths.appLogo,
-                        height: 85,
-                        width: 65,
+                        height: 85.h,
+                        width: 65.w,
                       ),
-                      const SizedBox(height: 10),
+                      SizedBox(height: 10.h),
                       const Text(
                         'Markaz ElAma',
                         style: TextStyle(
@@ -139,8 +142,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
                           child: const TextField(
@@ -174,8 +177,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
                           child: const TextField(
@@ -209,8 +212,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
                           child: const TextField(
@@ -244,8 +247,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
                           child: TextField(
@@ -292,8 +295,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
                           child: TextField(
@@ -332,348 +335,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         ),
                       ),
                       const SizedBox(height: 18),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(255, 45),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: const Text(
-                          'Sign Up',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                            color: kPrimaryColor,
-                          ),
-                        ),
-                        onPressed: () {
-                          showDialog(
-                            barrierDismissible: false,
-                            context: context,
-                            builder: (BuildContext context) {
-                              return AlertDialog(
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.all(
-                                    Radius.circular(16),
-                                  ),
-                                ),
-                                actions: [
-                                  Center(
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 40),
-                                      child: SizedBox(
-                                        width: 700,
-                                        height: 288,
-                                        child: Column(
-                                          children: [
-                                            const Text(
-                                              'The code has been send',
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w400,
-                                                color: kLogoutTextColor,
-                                              ),
-                                            ),
-                                            const Text(
-                                              'to your mail',
-                                              style: TextStyle(
-                                                fontSize: 14,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w400,
-                                                color: kLogoutTextColor,
-                                              ),
-                                            ),
-                                            const Padding(
-                                              padding: EdgeInsets.only(
-                                                top: 25,
-                                                bottom: 10,
-                                              ),
-                                              child: Row(
-                                                children: [
-                                                  Text(
-                                                    'Enter Code',
-                                                    style: TextStyle(
-                                                      fontSize: 16,
-                                                      fontFamily: 'Poppins',
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      color: kLogoutTextColor,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(
-                                                border: Border.all(
-                                                    color: kLogoutTextColor),
-                                                borderRadius:
-                                                    const BorderRadius.all(
-                                                  Radius.circular(14),
-                                                ),
-                                              ),
-                                              height: 65,
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceAround,
-                                                children: [
-                                                  Container(
-                                                    height: 30,
-                                                    width: 30,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                        Radius.circular(8),
-                                                      ),
-                                                      color: kSecondaryColor,
-                                                    ),
-                                                    child: TextField(
-                                                      decoration:
-                                                          const InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none),
-                                                      onChanged: (value) {
-                                                        if (value.length == 1) {
-                                                          FocusScope.of(context)
-                                                              .nextFocus();
-                                                        }
-                                                      },
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineMedium,
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(
-                                                            1),
-                                                        FilteringTextInputFormatter
-                                                            .digitsOnly,
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    height: 30,
-                                                    width: 30,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                        Radius.circular(8),
-                                                      ),
-                                                      color: kSecondaryColor,
-                                                    ),
-                                                    child: TextField(
-                                                      decoration:
-                                                          const InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none),
-                                                      onChanged: (value) {
-                                                        if (value.length == 1) {
-                                                          FocusScope.of(context)
-                                                              .nextFocus();
-                                                        }
-                                                      },
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineMedium,
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(
-                                                            1),
-                                                        FilteringTextInputFormatter
-                                                            .digitsOnly,
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    height: 30,
-                                                    width: 30,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                        Radius.circular(8),
-                                                      ),
-                                                      color: kSecondaryColor,
-                                                    ),
-                                                    child: TextField(
-                                                      decoration:
-                                                          const InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none),
-                                                      onChanged: (value) {
-                                                        if (value.length == 1) {
-                                                          FocusScope.of(context)
-                                                              .nextFocus();
-                                                        }
-                                                      },
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineMedium,
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(
-                                                            1),
-                                                        FilteringTextInputFormatter
-                                                            .digitsOnly,
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    height: 30,
-                                                    width: 30,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                        Radius.circular(8),
-                                                      ),
-                                                      color: kSecondaryColor,
-                                                    ),
-                                                    child: TextField(
-                                                      decoration:
-                                                          const InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none),
-                                                      onChanged: (value) {
-                                                        if (value.length == 1) {
-                                                          FocusScope.of(context)
-                                                              .nextFocus();
-                                                        }
-                                                      },
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineMedium,
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(
-                                                            1),
-                                                        FilteringTextInputFormatter
-                                                            .digitsOnly,
-                                                      ],
-                                                    ),
-                                                  ),
-                                                  Container(
-                                                    height: 30,
-                                                    width: 30,
-                                                    decoration:
-                                                        const BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.all(
-                                                        Radius.circular(8),
-                                                      ),
-                                                      color: kSecondaryColor,
-                                                    ),
-                                                    child: TextField(
-                                                      decoration:
-                                                          const InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none),
-                                                      onChanged: (value) {
-                                                        if (value.length == 1) {
-                                                          FocusScope.of(context)
-                                                              .nextFocus();
-                                                        }
-                                                      },
-                                                      style: Theme.of(context)
-                                                          .textTheme
-                                                          .headlineMedium,
-                                                      keyboardType:
-                                                          TextInputType.number,
-                                                      textAlign:
-                                                          TextAlign.center,
-                                                      inputFormatters: [
-                                                        LengthLimitingTextInputFormatter(
-                                                            1),
-                                                        FilteringTextInputFormatter
-                                                            .digitsOnly,
-                                                      ],
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            const Row(
-                                              children: [
-                                                Text(
-                                                  'Time Reminig 0:00',
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
-                                                    fontFamily: 'Poppins',
-                                                    color: kSecondaryColor,
-                                                    fontSize: 10,
-                                                  ),
-                                                ),
-                                                SizedBox(width: 40),
-                                                Text(
-                                                  'Resend Code',
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.w500,
-                                                    fontFamily: 'Poppins',
-                                                    color: kPrimaryColor,
-                                                    fontSize: 12,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                            const SizedBox(height: 50),
-                                            InkWell(
-                                              child: const Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                children: [
-                                                  Text(
-                                                    'Done',
-                                                    style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.w400,
-                                                      fontFamily: 'Poppins',
-                                                      color: kLogoutTextColor,
-                                                      fontSize: 20,
-                                                    ),
-                                                  ),
-                                                  Icon(
-                                                    Icons
-                                                        .arrow_forward_outlined,
-                                                    color: kLogoutTextColor,
-                                                    size: 35,
-                                                  )
-                                                ],
-                                              ),
-                                              onTap: () {},
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        },
-                      ),
+                      const BottomDialog(),
                     ],
                   ),
                 ),
@@ -685,20 +347,3 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
     );
   }
 }
-// const AlertDialog(
-// shape:
-// RoundedRectangleBorder(
-// borderRadius:
-// BorderRadius.all(
-// Radius.circular(16),
-// ),
-// ),
-// content:
-// Text(
-// 'AppText.passwordreset',
-// textAlign:
-// TextAlign.center,
-// style:
-// TextStyle(fontSize: 13),
-// ),
-// );
