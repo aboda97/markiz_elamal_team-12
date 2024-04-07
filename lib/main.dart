@@ -3,10 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/features/splash_feature/presentation/splash_view.dart';
-//import 'features/logout_feature/presentation/logout_view.dart';
 
 void main() async {
   await ScreenUtil.ensureScreenSize();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(428, 926),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(
+      builder:(_, child) =>  MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Markiz Elamal',
         theme: ThemeData(
@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         home: const SplashView(),
+
       ),
     );
   }

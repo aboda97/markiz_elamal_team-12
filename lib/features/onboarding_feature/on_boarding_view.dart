@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/presentation/widgets/on_boarding_view_body.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/reservation_view.dart';
@@ -18,10 +19,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       appBar: AppBar(
         leading: TextButton(
           onPressed: () {},
-          child: const Text(
+          child:  Text(
             'AR',
             style: TextStyle(
-              fontSize: 18.0,
+              fontSize: 18.0.sp,
               color: kWhiteColor,
             ),
           ),
@@ -36,10 +37,10 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 }),
               );
             },
-            child: const Text(
+            child:  Text(
               'Skip',
               style: TextStyle(
-                fontSize: 18.0,
+                fontSize: 18.0.sp,
                 color: kWhiteColor,
               ),
             ),

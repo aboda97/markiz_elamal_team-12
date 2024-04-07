@@ -20,8 +20,10 @@ class ChatsView extends StatelessWidget {
               GoogleFonts.poppins(fontSize: 32.sp, fontWeight: FontWeight.w600),
         ),
         leading: IconButton(
-          onPressed: () {},
-          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: const Icon(Icons.arrow_back_ios),
         ),
       ),
       body: ListView.separated(
@@ -30,7 +32,7 @@ class ChatsView extends StatelessWidget {
           height: 3.h,
           thickness: 3.h,
         ),
-        itemBuilder: (context, index) => ChatItemList(),
+        itemBuilder: (context, index) => const ChatItemList(),
         itemCount: 10,
       ),
     );

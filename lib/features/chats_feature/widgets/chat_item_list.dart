@@ -18,6 +18,7 @@ class ChatItemList extends StatelessWidget {
             borderRadius: BorderRadius.circular(30.r),
             child: Image.asset(AppPaths.doctorImage,width: 80.w,height: 80.h,),
           ),
+          
           SizedBox(
             width: 19.w,
           ),
@@ -37,10 +38,11 @@ class ChatItemList extends StatelessWidget {
               ),),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text("massage time ",style: GoogleFonts.poppins(
               fontWeight:FontWeight.w500,
               fontSize:13.sp
+
           ),),
         ],
       ),

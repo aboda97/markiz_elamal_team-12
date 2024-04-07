@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:markiz_elamal/core/utils/app_paths.dart';
 
 import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_paths.dart';
 import 'widgets/book_a_date_widget.dart';
 import 'widgets/select_a_time_widget.dart';
 

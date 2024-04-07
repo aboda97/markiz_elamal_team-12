@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_paths.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/on_boarding_view.dart';
@@ -44,11 +45,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
               builder: (context, _) {
                 return SlideTransition(
                   position: slideTextAnimate,
-                  child: const Text(
+                  child:  Text(
                     'Markiz ElAmal',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 24.0,
+                      fontSize: 24.0.sp,
                       color: kPrimaryColor,
                       fontWeight: FontWeight.w500,
                     ),

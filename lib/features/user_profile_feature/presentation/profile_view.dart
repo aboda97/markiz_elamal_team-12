@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:markiz_elamal/core/utils/app_colors.dart';
-import 'package:markiz_elamal/core/utils/app_paths.dart';
 
+import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_paths.dart';
 import '../../profile_details_feature/profile_details_view.dart';
 import '../../settings_feature/setting_view.dart';
 import 'widgets/profile_widget.dart';

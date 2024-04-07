@@ -21,14 +21,16 @@ class _SignInViewBodyState extends State<SignInViewBody> {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(
-        child: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Column(
+        child: SingleChildScrollView(
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+
                   const Padding(
-                    padding: EdgeInsets.only(top: 30, left: 30, bottom: 245),
+                    padding: EdgeInsets.only(top: 30.h, left: 30.w, bottom: 245.h),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -107,11 +109,12 @@ class _SignInViewBodyState extends State<SignInViewBody> {
               ),
             ),
             Positioned(
-              bottom: 200,
-              left: 42,
+              bottom: 200.h,
+              left: 42.w,
               child: Container(
                 width: 335.w,
                 height: 425.h,
+
                 decoration: BoxDecoration(
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(30.r),
@@ -229,12 +232,13 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                       ),
                       SizedBox(height: 3.h),
                       const CustomBottomSheet(),
+
                     ],
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

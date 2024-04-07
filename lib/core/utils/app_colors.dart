@@ -11,3 +11,4 @@ const kChangePassIconColor = Color(0xff00C48C);
 const kPrivacyIconColor = Color(0xff9BA6FA);
 const kLogoutTextColor = Color(0xff233B55);
 const kLogoutConColor = Color(0xff144774);
+const kDetailsTextColor = Color(0xFF9ECAE3);
