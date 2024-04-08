@@ -21,30 +21,25 @@ class MyApp extends StatelessWidget {
         statusBarColor: Colors.transparent,
       ),
     );
-    return ScreenUtilInit(
-      designSize: const Size(428, 926),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder:(_, child) =>  MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Markiz Elamal',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
-          useMaterial3: true,
-          ////----> AppBar Theme
-          appBarTheme: const AppBarTheme(
-            backgroundColor: kPrimaryColor,
-            centerTitle: true,
-            elevation: 0,
-            foregroundColor: kWhiteColor,
-            iconTheme: IconThemeData(
-              color: kWhiteColor,
-            ),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Markiz Elamal',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+        useMaterial3: true,
+        ////----> AppBar Theme
+        appBarTheme: const AppBarTheme(
+          backgroundColor: kPrimaryColor,
+          centerTitle: true,
+          elevation: 0,
+          foregroundColor: kWhiteColor,
+          iconTheme: IconThemeData(
+            color: kWhiteColor,
           ),
         ),
-        home: const SplashView(),
-
       ),
+      home: const SplashView(),
+
     );
   }
 }

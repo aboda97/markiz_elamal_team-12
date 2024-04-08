@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:markiz_elamal_team_12/features/splash_feature/presentation/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
+  static const String routName ="Splash";
   const SplashView({super.key});
 
   @override

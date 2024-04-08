@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
+import 'package:markiz_elamal_team_12/features/home_view/presentation/views/homescreen.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/presentation/widgets/on_boarding_view_body.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/reservation_view.dart';
 
@@ -14,6 +15,7 @@ class OnBoardingView extends StatefulWidget {
 class _OnBoardingViewState extends State<OnBoardingView> {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: AppBar(
@@ -33,7 +35,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return const ReservationView();
+                  return const HomeScreen();
                 }),
               );
             },

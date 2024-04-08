@@ -19,6 +19,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: SafeArea(

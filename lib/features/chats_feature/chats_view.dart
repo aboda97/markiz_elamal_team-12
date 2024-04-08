@@ -6,10 +6,12 @@ import 'package:markiz_elamal_team_12/features/chats_feature/widgets/chat_item_l
 import '../../core/utils/app_colors.dart';
 
 class ChatsView extends StatelessWidget {
+  static const String routName="chats";
   const ChatsView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,

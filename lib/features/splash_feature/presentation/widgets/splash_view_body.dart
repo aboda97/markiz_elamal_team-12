@@ -34,6 +34,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -67,6 +68,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       const Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
+
           context,
           MaterialPageRoute(builder: (context) {
             return const OnBoardingView();
@@ -75,7 +77,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
       },
     );
   }
-
 //Method to init Sliding Animation
   void initSlidingAnimation() {
     animationController = AnimationController(

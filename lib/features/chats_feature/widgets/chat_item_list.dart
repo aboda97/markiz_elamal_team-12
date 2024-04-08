@@ -9,6 +9,7 @@ class ChatItemList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 14.0.w,vertical: 28.h),
       child: Row(

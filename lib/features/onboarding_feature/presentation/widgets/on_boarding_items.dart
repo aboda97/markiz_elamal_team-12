@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/global_variables.dart';
+import 'package:markiz_elamal_team_12/features/auth_feature/presentation/sign_in_view.dart';
 import 'package:markiz_elamal_team_12/features/onboarding_feature/data/models/on_boarding_model.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/reservation_view.dart';
 
@@ -84,7 +85,7 @@ class OnBoardingItems extends StatelessWidget {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(builder: (context) {
-                                  return const HomeScreen();
+                                  return const SignInView();
                                 }),
                               );
                             }
