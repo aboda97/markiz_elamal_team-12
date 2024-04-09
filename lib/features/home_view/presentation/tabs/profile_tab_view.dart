@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:markiz_elamal_team_12/features/chats_feature/chats_view.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_paths.dart';
@@ -86,7 +87,9 @@ class ProfileTabView extends StatelessWidget {
                   ProfileWidget(
                     icon: Icons.chat_bubble_outline,
                     title: 'Chats',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => const ChatsView(),));
+                    },
                   ),
                   SizedBox(
                     height: 20.h,

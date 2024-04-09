@@ -63,6 +63,7 @@ class _MassageDoctorViewState extends State<MassageDoctorView> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(

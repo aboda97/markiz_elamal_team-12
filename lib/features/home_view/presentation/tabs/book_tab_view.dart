@@ -134,7 +134,7 @@ class _BookTabViewState extends State<BookTabView> {
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
                                SliverGridDelegateWithFixedCrossAxisCount(
-                            childAspectRatio: .6,
+                            childAspectRatio: .67,
                             crossAxisCount: 2, // Number of columns
                             crossAxisSpacing: 8.0.w, // Spacing between columns
                             mainAxisSpacing: 8.0.h, // Spacing between rows

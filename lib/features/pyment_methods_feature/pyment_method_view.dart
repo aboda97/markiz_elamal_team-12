@@ -17,6 +17,7 @@ class _PaymentMethodViewState extends State<PaymentMethodView> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(

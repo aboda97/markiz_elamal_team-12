@@ -13,17 +13,18 @@ class BottomDialog extends StatefulWidget {
 class _BottomDialogState extends State<BottomDialog> {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        fixedSize: const Size(255, 45),
+        fixedSize:  Size(255.w, 45.h),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.r),
         ),
       ),
-      child: const Text(
+      child:  Text(
         'Sign Up',
         style: TextStyle(
-          fontSize: 18,
+          fontSize: 18.sp,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
           color: kPrimaryColor,
@@ -43,41 +44,41 @@ class _BottomDialogState extends State<BottomDialog> {
               actions: [
                 Center(
                   child: Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding:  EdgeInsets.only(top: 40.h),
                     child: SizedBox(
                       width: 700.w,
                       height: 310.h,
                       child: Column(
                         children: [
-                          const Text(
+                           Text(
                             'The code has been send',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
                               color: kLogoutTextColor,
                             ),
                           ),
-                          const Text(
+                           Text(
                             'to your mail',
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 14.sp,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w400,
                               color: kLogoutTextColor,
                             ),
                           ),
-                          const Padding(
+                           Padding(
                             padding: EdgeInsets.only(
-                              top: 25,
-                              bottom: 10,
+                              top: 25.h,
+                              bottom: 10.h,
                             ),
                             child: Row(
                               children: [
                                 Text(
                                   'Enter Code',
                                   style: TextStyle(
-                                    fontSize: 16,
+                                    fontSize: 16.sp,
                                     fontFamily: 'Poppins',
                                     fontWeight: FontWeight.w400,
                                     color: kLogoutTextColor,
@@ -242,30 +243,30 @@ class _BottomDialogState extends State<BottomDialog> {
                           ),
                           Row(
                             children: [
-                              const Text(
+                               Text(
                                 'Time Reminig 0:00',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontFamily: 'Poppins',
                                   color: kSecondaryColor,
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                 ),
                               ),
                               SizedBox(width: 40.w),
-                              const Text(
+                               Text(
                                 'Resend Code',
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontFamily: 'Poppins',
                                   color: kPrimaryColor,
-                                  fontSize: 12,
+                                  fontSize: 12.sp,
                                 ),
                               ),
                             ],
                           ),
                           SizedBox(height: 50.h),
                           InkWell(
-                            child: const Row(
+                            child:  Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
@@ -274,13 +275,13 @@ class _BottomDialogState extends State<BottomDialog> {
                                     fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
                                     color: kLogoutTextColor,
-                                    fontSize: 20,
+                                    fontSize: 20.sp,
                                   ),
                                 ),
                                 Icon(
                                   Icons.arrow_forward_outlined,
                                   color: kLogoutTextColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 )
                               ],
                             ),
