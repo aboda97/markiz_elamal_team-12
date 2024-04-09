@@ -35,10 +35,10 @@ class _BookTabViewState extends State<BookTabView> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   //--> Date Choosen
-                  const Text(
+                   Text(
                     'October  2,2024',
                     style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 22.0.sp,
                         fontWeight: FontWeight.w700,
                         color: kPrimaryColor),
                   ),
@@ -49,13 +49,13 @@ class _BookTabViewState extends State<BookTabView> {
                       //`selectedDate` the new date selected.
                     },
                     activeColor: kPrimaryColor,
-                    headerProps: const EasyHeaderProps(
+                    headerProps:  EasyHeaderProps(
                         //  monthPickerType: MonthPickerType.switcher,
-                        padding: EdgeInsets.only(top: 20.0, bottom: 15.0),
+                        padding: EdgeInsets.only(top: 20.0.h, bottom: 15.0.h),
                         showMonthPicker: false,
                         selectedDateStyle: TextStyle(
                             color: kPrimaryColor,
-                            fontSize: 20.0,
+                            fontSize: 20.0.sp,
                             fontWeight: FontWeight.w600)),
                     dayProps: const EasyDayProps(
                       todayHighlightStyle: TodayHighlightStyle.withBackground,
@@ -63,9 +63,9 @@ class _BookTabViewState extends State<BookTabView> {
                     ),
                   ),
                   //--> Divider
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 15.0),
-                    child: Divider(
+                   Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.0.h),
+                    child: const Divider(
                       color: kPrimaryColor,
                     ),
                   ),
@@ -73,17 +73,17 @@ class _BookTabViewState extends State<BookTabView> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                       Text(
                         'Available Doctor',
                         style: TextStyle(
-                          fontSize: 18.0,
+                          fontSize: 18.0.sp,
                           fontWeight: FontWeight.w500,
                           color: kPrimaryColor,
                         ),
                       ),
                       Container(
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20.0),
+                          borderRadius: BorderRadius.circular(20.0.r),
                           color: kSecondaryColor.withOpacity(.5),
                         ),
                         child: Row(
@@ -118,8 +118,8 @@ class _BookTabViewState extends State<BookTabView> {
                     ],
                   ),
                   //--> Available Doctor ListView
-                  const SizedBox(
-                    height: 30.0,
+                   SizedBox(
+                    height: 30.0.h,
                   ),
                   filterCategory
                       ? ListView.builder(
@@ -133,11 +133,11 @@ class _BookTabViewState extends State<BookTabView> {
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
                           gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
+                               SliverGridDelegateWithFixedCrossAxisCount(
                             childAspectRatio: .6,
                             crossAxisCount: 2, // Number of columns
-                            crossAxisSpacing: 8.0, // Spacing between columns
-                            mainAxisSpacing: 8.0, // Spacing between rows
+                            crossAxisSpacing: 8.0.w, // Spacing between columns
+                            mainAxisSpacing: 8.0.h, // Spacing between rows
                           ),
                           itemBuilder: (index, context) =>
                               const AvailableDoctorGridViewItem(),

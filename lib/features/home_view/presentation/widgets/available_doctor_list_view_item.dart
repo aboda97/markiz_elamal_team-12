@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_paths.dart';
 
@@ -7,12 +8,13 @@ class AvailableDoctorListViewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Container(
-      margin: const EdgeInsets.only(bottom: 20.0),
-      padding: const EdgeInsets.symmetric(horizontal: 15.0),
+      margin:  EdgeInsets.only(bottom: 20.0.h),
+      padding: EdgeInsets.symmetric(horizontal: 15.0.w),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
-          16.0,
+          16.0.r,
         ),
         color: kPrimaryColor,
       ),
@@ -23,31 +25,31 @@ class AvailableDoctorListViewItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                 Text(
                   'Dr. Osama Ali',
                   style: TextStyle(
                     color: kWhiteColor,
-                    fontSize: 20.0,
+                    fontSize: 20.0.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Text(
+                 Text(
                   'Speech',
                   style: TextStyle(
                     color: kSecondaryColor,
-                    fontSize: 18.0,
+                    fontSize: 18.0.sp,
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 10.0),
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  margin:  EdgeInsets.only(top: 10.0.h),
+                  padding: EdgeInsets.symmetric(horizontal: 10.0.w),
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(20.0.r),
                       border: Border.all(color: kWhiteColor)),
-                  child: const Row(
+                  child:  Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Text(
+                      const Text(
                         '4.9',
                         style: TextStyle(
                           color: kWhiteColor,
@@ -56,7 +58,7 @@ class AvailableDoctorListViewItem extends StatelessWidget {
                       Icon(
                         Icons.star_rate,
                         color: kRateColor,
-                        size: 18.0,
+                        size: 18.0.sp,
                       )
                     ],
                   ),
