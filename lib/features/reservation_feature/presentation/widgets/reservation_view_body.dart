@@ -18,7 +18,6 @@ class _ReservationViewBodyState extends State<ReservationViewBody> {
       EasyInfiniteDateTimelineController();
   @override
   Widget build(BuildContext context) {
-    ScreenUtil.init(context);
     return Padding(
       padding: const EdgeInsets.all(20.0),
       child: SingleChildScrollView(

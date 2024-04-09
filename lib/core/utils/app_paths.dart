@@ -9,8 +9,12 @@ class AppPaths {
   static String visaLogo = 'assets/images/visa logo.png';
   static String cashLogo = 'assets/images/cash logo.jpeg';
   static String logoutImage = 'assets/images/ammar.png';
-  static String profileImage='assets/images/profileImage.png';
-  static String popularDoctorImage='assets/images/popularDoctorImage.png';
-  static String filterIcon="assets/images/Frame 1963.png";
-  static String childImage="assets/images/Mask group.png";
+  static String profileImage = 'assets/images/profileImage.png';
+  static String popularDoctorImage = 'assets/images/popularDoctorImage.png';
+  static String filterIcon = "assets/images/Frame 1963.png";
+  static String childImage = "assets/images/Mask group.png";
+  static String homeIcon = "assets/images/home icon.png";
+  static String categoryIcon = "assets/images/category icon.png";
+  static String watchIcon = "assets/images/watch icon.png";
+  static String profileIcon = "assets/images/profile icon.png";
 }
