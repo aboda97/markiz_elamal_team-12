@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_paths.dart';
 import 'package:intl/intl.dart' as intl;
@@ -18,11 +17,11 @@ class _MassageDoctorViewState extends State<MassageDoctorView> {
 
   late ScrollController scrollController;
   List<String> massages = [
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "bbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "ccccccccccccccccccaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "vvvvvvvvvvvvvvvvvvaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "zzzzzzzzzzzzzzzzzzaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "111111111111111111aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
@@ -68,14 +67,17 @@ class _MassageDoctorViewState extends State<MassageDoctorView> {
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Row(
           children: [
             const Spacer(),
             Text(
               "Doctor Name",
-              style: GoogleFonts.poppins(
+              style: TextStyle(
+                fontFamily: "Poppins",
                   fontSize: 22.sp, fontWeight: FontWeight.w600),
             ),
             const Spacer(),
@@ -92,20 +94,17 @@ class _MassageDoctorViewState extends State<MassageDoctorView> {
       body: Column(
         children: [
           Expanded(
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 20.h),
-              child: ListView.separated(
-                reverse: true,
-                // cacheExtent: scrollController.position.maxScrollExtent,
-                separatorBuilder: (context, index) => SizedBox(
-                  height: 14.h,
-                ),
-                itemCount: massages.length,
-                controller: scrollController,
-                itemBuilder: (context, index) => MassageItem(
-                    massage: massages[(massages.length - 1) - index],
-                    fromMe: index % 2 == 0),
+            child: ListView.separated(
+              padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 20.h) ,
+              reverse: true,
+              separatorBuilder: (context, index) => SizedBox(
+                height: 14.h,
               ),
+              itemCount: massages.length,
+              controller: scrollController,
+              itemBuilder: (context, index) => MassageItem(
+                  massage: massages[(massages.length - 1) - index],
+                  fromMe: !(index % 5 == 0)),
             ),
           ),
           ConstrainedBox(
@@ -137,7 +136,8 @@ class _MassageDoctorViewState extends State<MassageDoctorView> {
                         },
                         decoration: InputDecoration(
                             hintText: "Type message",
-                            hintStyle: GoogleFonts.poppins(
+                            hintStyle: TextStyle(
+                              fontFamily: "Poppins",
                               color: kLogoutTextColor,
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w400,

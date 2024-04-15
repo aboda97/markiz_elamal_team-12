@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:markiz_elamal_team_12/features/chats_feature/widgets/chat_item_list.dart';
+import 'package:markiz_elamal_team_12/features/massage_doctor_feature/massage_doctore_view.dart';
 
 import '../../core/utils/app_colors.dart';
 
@@ -34,7 +35,10 @@ class ChatsView extends StatelessWidget {
           height: 3.h,
           thickness: 3.h,
         ),
-        itemBuilder: (context, index) => const ChatItemList(),
+        itemBuilder: (context, index) => InkWell(
+          splashColor: Colors.transparent,
+            onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const MassageDoctorView(),)),
+            child: const ChatItemList()),
         itemCount: 10,
       ),
     );

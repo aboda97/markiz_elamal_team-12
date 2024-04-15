@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart' as intl;
 
 import '../../../core/utils/app_colors.dart';
@@ -13,6 +12,7 @@ class MassageItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Row(
       children: [
         (fromMe) ? const Spacer() : const SizedBox(),
@@ -27,13 +27,8 @@ class MassageItem extends StatelessWidget {
                 textDirection:
                     (isRtl(massage)) ? TextDirection.rtl : TextDirection.ltr,
                 massage,
-                style: (isRtl(massage))
-                    ? TextStyle(
-                        color: (fromMe) ? kWhiteColor : kBlackColor,
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w500,
-                      )
-                    : GoogleFonts.poppins(
+                style:  TextStyle(
+                        fontFamily: "Poppins",
                         color: (fromMe) ? kWhiteColor : kBlackColor,
                         fontSize: 20.sp,
                         fontWeight: FontWeight.w500,
