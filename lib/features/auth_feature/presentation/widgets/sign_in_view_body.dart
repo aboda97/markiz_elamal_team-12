@@ -40,7 +40,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                           style: TextStyle(
                             color: kWhiteColor,
                             fontFamily: 'Poppins',
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -49,7 +49,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                           style: TextStyle(
                             color: kWhiteColor,
                             fontFamily: 'Poppins',
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -59,38 +59,38 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   Container(
                     width: double.infinity,
                     height: 514,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: kWhiteColor,
                       borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(70),
-                        topLeft: Radius.circular(70),
+                        topRight: Radius.circular(70.r),
+                        topLeft: Radius.circular(70.r),
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(
-                        bottom: 15,
-                        left: 70,
+                      padding: EdgeInsets.only(
+                        bottom: 15.h,
+                        left: 70.w,
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          const Text(
+                          Text(
                             'Don’t have an account?',
                             style: TextStyle(
                               color: kPrimaryColor,
                               fontFamily: 'Poppins',
-                              fontSize: 12,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          SizedBox(width: 8.w),
                           InkWell(
-                            child: const Text(
+                            child: Text(
                               'Sign Up',
                               style: TextStyle(
                                 color: kLogoutTextColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -127,48 +127,48 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                     children: [
                       Image.asset(
                         AppPaths.appLogo,
-                        height: 85,
-                        width: 65,
+                        height: 85.h,
+                        width: 65.w,
                       ),
-                      const SizedBox(height: 10),
-                      const Text(
+                      SizedBox(height: 10.h),
+                      Text(
                         'Markaz ElAma',
                         style: TextStyle(
                           color: kWhiteColor,
                           fontWeight: FontWeight.w400,
-                          fontSize: 15,
+                          fontSize: 15.sp,
                           fontFamily: 'Peralta',
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 20,
-                          right: 15,
-                          left: 15,
+                        padding: EdgeInsets.only(
+                          top: 20.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
-                          child: const TextField(
+                          child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Padding(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: EdgeInsets.only(left: 15.w),
                                 child: Icon(
                                   Icons.email_outlined,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
                               hintText: 'Email',
                               hintStyle: TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
@@ -176,46 +176,46 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 20,
-                          right: 15,
-                          left: 15,
+                        padding: EdgeInsets.only(
+                          top: 20.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(color: kWhiteColor),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(14),
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(14.r),
                             ),
                           ),
-                          child: const TextField(
+                          child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Padding(
-                                padding: EdgeInsets.only(left: 15),
+                                padding: EdgeInsets.only(left: 15.w),
                                 child: Icon(
                                   Icons.lock_outline_rounded,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
-                              hintText: 'Passward',
+                              hintText: 'Password',
                               hintStyle: TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                             keyboardType: TextInputType.visiblePassword,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 25),
+                      SizedBox(height: 25.h),
                       ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(255, 45),
+                          fixedSize: Size(255.w, 45.h),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(8.r),
                           ),
                         ),
                         onPressed: () {
@@ -236,12 +236,12 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 3),
+                      SizedBox(height: 3.h),
                       InkWell(
-                        child: const Text(
+                        child: Text(
                           'Forgot password ?',
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             color: kWhiteColor,
@@ -250,648 +250,619 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                         onTap: () {
                           showModalBottomSheet(
                             context: context,
-                            shape: const RoundedRectangleBorder(
+                            shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(30),
+                                top: Radius.circular(30.r),
                               ),
                             ),
                             builder: (BuildContext context) {
-                              return Container(
-                                decoration: const BoxDecoration(),
-                                // height: 370,
-                                child: Padding(
-                                  padding: EdgeInsets.symmetric(
-                                    vertical: 40.h,
-                                    horizontal: 30.w,
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(bottom: 15.h),
-                                        child: Text(
-                                          'Forget Password',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w600,
-                                            fontSize: 20,
-                                            fontFamily: 'Poppins',
-                                            color: kLogoutTextColor,
-                                          ),
-                                        ),
-                                      ),
-                                      const Text(
-                                        'Enter your email for verification process we',
+                              return Padding(
+                                padding: EdgeInsets.symmetric(
+                                  vertical: 40.h,
+                                  horizontal: 30.w,
+                                ),
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 15.h),
+                                      child: Text(
+                                        'Forget Password',
                                         style: TextStyle(
-                                          fontSize: 12,
-                                          color: kLogoutTextColor,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 20.sp,
                                           fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                      const Text(
-                                        'will send 5 digits code to your email',
-                                        style: TextStyle(
-                                          fontSize: 12,
                                           color: kLogoutTextColor,
-                                          fontFamily: 'Poppins',
-                                          fontWeight: FontWeight.w400,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsets.only(top: 20.h),
-                                        child: Row(
-                                          children: [
-                                            Text(
-                                              'Email',
-                                              style: TextStyle(
-                                                fontSize: 22.sp,
-                                                color: kLogoutTextColor,
-                                                fontFamily: 'Poppins',
-                                                fontWeight: FontWeight.w600,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
+                                    ),
+                                    Text(
+                                      'Enter your email for verification process we',
+                                      style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: kLogoutTextColor,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w400,
                                       ),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          border: Border.all(
-                                              color: kLogoutTextColor),
-                                          borderRadius: const BorderRadius.all(
-                                            Radius.circular(14),
-                                          ),
-                                        ),
-                                        child: const TextField(
-                                          decoration: InputDecoration(
-                                            border: InputBorder.none,
-                                            icon: Padding(
-                                              padding:
-                                                  EdgeInsets.only(left: 15),
-                                              child: Icon(
-                                                Icons.email_outlined,
-                                                color: kPrimaryColor,
-                                                size: 35,
-                                              ),
+                                    ),
+                                    Text(
+                                      'will send 5 digits code to your email',
+                                      style: TextStyle(
+                                        fontSize: 12.sp,
+                                        color: kLogoutTextColor,
+                                        fontFamily: 'Poppins',
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 20.h),
+                                      child: Row(
+                                        children: [
+                                          Text(
+                                            'Email',
+                                            style: TextStyle(
+                                              fontSize: 22.sp,
+                                              color: kLogoutTextColor,
+                                              fontFamily: 'Poppins',
+                                              fontWeight: FontWeight.w600,
                                             ),
                                           ),
-                                          keyboardType:
-                                              TextInputType.emailAddress,
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        border:
+                                            Border.all(color: kLogoutTextColor),
+                                        borderRadius: BorderRadius.all(
+                                          Radius.circular(14.r),
                                         ),
                                       ),
-                                      SizedBox(
-                                        height: 20.h,
-                                      ),
-                                      ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: kPrimaryColor,
-                                          fixedSize: Size(335.w, 60.h),
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(12.r),
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          icon: Padding(
+                                            padding:
+                                                EdgeInsets.only(left: 15.w),
+                                            child: Icon(
+                                              Icons.email_outlined,
+                                              color: kPrimaryColor,
+                                              size: 35.sp,
+                                            ),
                                           ),
                                         ),
-                                        onPressed: () {
-                                          showModalBottomSheet(
-                                              context: context,
-                                              shape:
-                                                  const RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.vertical(
-                                                  top: Radius.circular(30),
-                                                ),
+                                        keyboardType:
+                                            TextInputType.emailAddress,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 20.h,
+                                    ),
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: kPrimaryColor,
+                                        fixedSize: Size(335.w, 60.h),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(12.r),
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        showModalBottomSheet(
+                                            context: context,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.vertical(
+                                                top: Radius.circular(30.r),
                                               ),
-                                              builder: (BuildContext context) {
-                                                return Container(
-                                                  decoration:
-                                                      const BoxDecoration(),
-                                                  height: 600,
-                                                  width: double.infinity,
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                      top: 10,
-                                                      left: 30,
-                                                      right: 30,
-                                                    ),
-                                                    child: Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        const Text(
-                                                          'Reset Password',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontSize: 25,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
+                                            ),
+                                            builder: (BuildContext context) {
+                                              return Container(
+                                                decoration:
+                                                    const BoxDecoration(),
+                                                height: 600.h,
+                                                width: double.infinity,
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                    top: 10.h,
+                                                    left: 30.w,
+                                                    right: 30.w,
+                                                  ),
+                                                  child: Column(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    children: [
+                                                      Text(
+                                                        'Reset Password',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 25.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'Enter the code you receive in mail and',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 13.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'set the new password for your',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 13.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'accountso you can login and access',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 13.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Text(
+                                                        'all the features',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w400,
+                                                          fontSize: 13.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      SizedBox(height: 10.h),
+                                                      Text(
+                                                        'Enter the 5 digits code',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 18.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          border: Border.all(
+                                                              color:
+                                                                  kLogoutTextColor),
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                            Radius.circular(
+                                                                14.r),
                                                           ),
                                                         ),
-                                                        const Text(
-                                                          'Enter the code you receive in mail and',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        const Text(
-                                                          'set the new password for your',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        const Text(
-                                                          'accountso you can login and access',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        const Text(
-                                                          'all the features',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w400,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        const SizedBox(
-                                                            height: 10),
-                                                        const Text(
-                                                          'Enter the 5 digits code',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontSize: 18,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            border: Border.all(
-                                                                color:
-                                                                    kLogoutTextColor),
-                                                            borderRadius:
-                                                                const BorderRadius
-                                                                    .all(
-                                                              Radius.circular(
-                                                                  14),
-                                                            ),
-                                                          ),
-                                                          height: 45,
-                                                          child: Row(
-                                                            mainAxisAlignment:
-                                                                MainAxisAlignment
-                                                                    .spaceAround,
-                                                            children: [
-                                                              Container(
-                                                                height: 30,
-                                                                width: 30,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .all(
-                                                                    Radius
-                                                                        .circular(
-                                                                            8),
-                                                                  ),
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                ),
-                                                                child:
-                                                                    TextField(
-                                                                  decoration:
-                                                                      const InputDecoration(
-                                                                          border:
-                                                                              InputBorder.none),
-                                                                  onChanged:
-                                                                      (value) {
-                                                                    if (value
-                                                                            .length ==
-                                                                        1) {
-                                                                      FocusScope.of(
-                                                                              context)
-                                                                          .nextFocus();
-                                                                    }
-                                                                  },
-                                                                  style: Theme.of(
-                                                                          context)
-                                                                      .textTheme
-                                                                      .headlineMedium,
-                                                                  keyboardType:
-                                                                      TextInputType
-                                                                          .number,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  inputFormatters: [
-                                                                    LengthLimitingTextInputFormatter(
-                                                                        1),
-                                                                    FilteringTextInputFormatter
-                                                                        .digitsOnly,
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                              Container(
-                                                                height: 30,
-                                                                width: 30,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .all(
-                                                                    Radius
-                                                                        .circular(
-                                                                            8),
-                                                                  ),
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                ),
-                                                                child:
-                                                                    TextField(
-                                                                  decoration:
-                                                                      const InputDecoration(
-                                                                          border:
-                                                                              InputBorder.none),
-                                                                  onChanged:
-                                                                      (value) {
-                                                                    if (value
-                                                                            .length ==
-                                                                        1) {
-                                                                      FocusScope.of(
-                                                                              context)
-                                                                          .nextFocus();
-                                                                    }
-                                                                  },
-                                                                  style: Theme.of(
-                                                                          context)
-                                                                      .textTheme
-                                                                      .headlineMedium,
-                                                                  keyboardType:
-                                                                      TextInputType
-                                                                          .number,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  inputFormatters: [
-                                                                    LengthLimitingTextInputFormatter(
-                                                                        1),
-                                                                    FilteringTextInputFormatter
-                                                                        .digitsOnly,
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                              Container(
-                                                                height: 30,
-                                                                width: 30,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .all(
-                                                                    Radius
-                                                                        .circular(
-                                                                            8),
-                                                                  ),
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                ),
-                                                                child:
-                                                                    TextField(
-                                                                  decoration:
-                                                                      const InputDecoration(
-                                                                          border:
-                                                                              InputBorder.none),
-                                                                  onChanged:
-                                                                      (value) {
-                                                                    if (value
-                                                                            .length ==
-                                                                        1) {
-                                                                      FocusScope.of(
-                                                                              context)
-                                                                          .nextFocus();
-                                                                    }
-                                                                  },
-                                                                  style: Theme.of(
-                                                                          context)
-                                                                      .textTheme
-                                                                      .headlineMedium,
-                                                                  keyboardType:
-                                                                      TextInputType
-                                                                          .number,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  inputFormatters: [
-                                                                    LengthLimitingTextInputFormatter(
-                                                                        1),
-                                                                    FilteringTextInputFormatter
-                                                                        .digitsOnly,
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                              Container(
-                                                                height: 30,
-                                                                width: 30,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .all(
-                                                                    Radius
-                                                                        .circular(
-                                                                            8),
-                                                                  ),
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                ),
-                                                                child:
-                                                                    TextField(
-                                                                  decoration:
-                                                                      const InputDecoration(
-                                                                          border:
-                                                                              InputBorder.none),
-                                                                  onChanged:
-                                                                      (value) {
-                                                                    if (value
-                                                                            .length ==
-                                                                        1) {
-                                                                      FocusScope.of(
-                                                                              context)
-                                                                          .nextFocus();
-                                                                    }
-                                                                  },
-                                                                  style: Theme.of(
-                                                                          context)
-                                                                      .textTheme
-                                                                      .headlineMedium,
-                                                                  keyboardType:
-                                                                      TextInputType
-                                                                          .number,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  inputFormatters: [
-                                                                    LengthLimitingTextInputFormatter(
-                                                                        1),
-                                                                    FilteringTextInputFormatter
-                                                                        .digitsOnly,
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                              Container(
-                                                                height: 30,
-                                                                width: 30,
-                                                                decoration:
-                                                                    const BoxDecoration(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .all(
-                                                                    Radius
-                                                                        .circular(
-                                                                            8),
-                                                                  ),
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                ),
-                                                                child:
-                                                                    TextField(
-                                                                  decoration:
-                                                                      const InputDecoration(
-                                                                          border:
-                                                                              InputBorder.none),
-                                                                  onChanged:
-                                                                      (value) {
-                                                                    if (value
-                                                                            .length ==
-                                                                        1) {
-                                                                      FocusScope.of(
-                                                                              context)
-                                                                          .nextFocus();
-                                                                    }
-                                                                  },
-                                                                  style: Theme.of(
-                                                                          context)
-                                                                      .textTheme
-                                                                      .headlineMedium,
-                                                                  keyboardType:
-                                                                      TextInputType
-                                                                          .number,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  inputFormatters: [
-                                                                    LengthLimitingTextInputFormatter(
-                                                                        1),
-                                                                    FilteringTextInputFormatter
-                                                                        .digitsOnly,
-                                                                  ],
-                                                                ),
-                                                              ),
-                                                            ],
-                                                          ),
-                                                        ),
-                                                        const Text(
-                                                          'Password',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontSize: 18,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            border: Border.all(
-                                                                color:
-                                                                    kLogoutTextColor),
-                                                            borderRadius:
-                                                                const BorderRadius
-                                                                    .all(
-                                                              Radius.circular(
-                                                                  14),
-                                                            ),
-                                                          ),
-                                                          height: 45,
-                                                          child: TextField(
-                                                            decoration:
-                                                                InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none,
-                                                              suffixIcon:
-                                                                  IconButton(
-                                                                color:
-                                                                    kWhiteColor,
-                                                                icon: Icon(
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                  passwardvisible
-                                                                      ? Icons
-                                                                          .visibility_outlined
-                                                                      : Icons
-                                                                          .visibility_off_outlined,
-                                                                ),
-                                                                onPressed: () {
-                                                                  setState(
-                                                                    () {
-                                                                      passwardvisible =
-                                                                          !passwardvisible;
-                                                                    },
-                                                                  );
-                                                                },
-                                                              ),
-                                                            ),
-                                                            keyboardType:
-                                                                TextInputType
-                                                                    .visiblePassword,
-                                                          ),
-                                                        ),
-                                                        const Text(
-                                                          'Confirm Password',
-                                                          style: TextStyle(
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            fontSize: 18,
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color:
-                                                                kLogoutTextColor,
-                                                          ),
-                                                        ),
-                                                        Container(
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            border: Border.all(
-                                                                color:
-                                                                    kLogoutTextColor),
-                                                            borderRadius:
-                                                                const BorderRadius
-                                                                    .all(
-                                                              Radius.circular(
-                                                                  14),
-                                                            ),
-                                                          ),
-                                                          height: 45,
-                                                          child: TextField(
-                                                            decoration:
-                                                                InputDecoration(
-                                                              border:
-                                                                  InputBorder
-                                                                      .none,
-                                                              suffixIcon:
-                                                                  IconButton(
-                                                                color:
-                                                                    kWhiteColor,
-                                                                icon: Icon(
-                                                                  color:
-                                                                      kLogoutTextColor,
-                                                                  passwardvisible
-                                                                      ? Icons
-                                                                          .visibility_outlined
-                                                                      : Icons
-                                                                          .visibility_off_outlined,
-                                                                ),
-                                                                onPressed: () {
-                                                                  setState(
-                                                                    () {
-                                                                      passwardvisible =
-                                                                          !passwardvisible;
-                                                                    },
-                                                                  );
-                                                                },
-                                                              ),
-                                                            ),
-                                                            keyboardType:
-                                                                TextInputType
-                                                                    .visiblePassword,
-                                                          ),
-                                                        ),
-                                                        const SizedBox(
-                                                            height: 15),
-                                                        ElevatedButton(
-                                                          style: ElevatedButton
-                                                              .styleFrom(
-                                                            backgroundColor:
-                                                                kPrimaryColor,
-                                                            fixedSize:
-                                                                const Size(
-                                                                    335, 60),
-                                                            shape:
-                                                                RoundedRectangleBorder(
-                                                              borderRadius:
-                                                                  BorderRadius
+                                                        height: 45.h,
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceAround,
+                                                          children: [
+                                                            Container(
+                                                              height: 30.h,
+                                                              width: 30.w,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .all(
+                                                                  Radius
                                                                       .circular(
-                                                                          12),
+                                                                          8.r),
+                                                                ),
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                              ),
+                                                              child: TextField(
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                        border:
+                                                                            InputBorder.none),
+                                                                onChanged:
+                                                                    (value) {
+                                                                  if (value
+                                                                          .length ==
+                                                                      1) {
+                                                                    FocusScope.of(
+                                                                            context)
+                                                                        .nextFocus();
+                                                                  }
+                                                                },
+                                                                style: Theme.of(
+                                                                        context)
+                                                                    .textTheme
+                                                                    .headlineMedium,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                inputFormatters: [
+                                                                  LengthLimitingTextInputFormatter(
+                                                                      1),
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly,
+                                                                ],
+                                                              ),
                                                             ),
+                                                            Container(
+                                                              height: 30.h,
+                                                              width: 30.w,
+                                                              decoration:
+                                                                   BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          8.r),
+                                                                ),
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                              ),
+                                                              child: TextField(
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                        border:
+                                                                            InputBorder.none),
+                                                                onChanged:
+                                                                    (value) {
+                                                                  if (value
+                                                                          .length ==
+                                                                      1) {
+                                                                    FocusScope.of(
+                                                                            context)
+                                                                        .nextFocus();
+                                                                  }
+                                                                },
+                                                                style: Theme.of(
+                                                                        context)
+                                                                    .textTheme
+                                                                    .headlineMedium,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                inputFormatters: [
+                                                                  LengthLimitingTextInputFormatter(
+                                                                      1),
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly,
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: 30.h,
+                                                              width: 30.w,
+                                                              decoration:
+                                                                   BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          8.r),
+                                                                ),
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                              ),
+                                                              child: TextField(
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                        border:
+                                                                            InputBorder.none),
+                                                                onChanged:
+                                                                    (value) {
+                                                                  if (value
+                                                                          .length ==
+                                                                      1) {
+                                                                    FocusScope.of(
+                                                                            context)
+                                                                        .nextFocus();
+                                                                  }
+                                                                },
+                                                                style: Theme.of(
+                                                                        context)
+                                                                    .textTheme
+                                                                    .headlineMedium,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                inputFormatters: [
+                                                                  LengthLimitingTextInputFormatter(
+                                                                      1),
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly,
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: 30.h,
+                                                              width: 30.w,
+                                                              decoration:
+                                                                   BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          8.r),
+                                                                ),
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                              ),
+                                                              child: TextField(
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                        border:
+                                                                            InputBorder.none),
+                                                                onChanged:
+                                                                    (value) {
+                                                                  if (value
+                                                                          .length ==
+                                                                      1) {
+                                                                    FocusScope.of(
+                                                                            context)
+                                                                        .nextFocus();
+                                                                  }
+                                                                },
+                                                                style: Theme.of(
+                                                                        context)
+                                                                    .textTheme
+                                                                    .headlineMedium,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                inputFormatters: [
+                                                                  LengthLimitingTextInputFormatter(
+                                                                      1),
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly,
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              height: 30.h,
+                                                              width: 30.w,
+                                                              decoration:
+                                                                   BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .all(
+                                                                  Radius
+                                                                      .circular(
+                                                                          8.r),
+                                                                ),
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                              ),
+                                                              child: TextField(
+                                                                decoration:
+                                                                    const InputDecoration(
+                                                                        border:
+                                                                            InputBorder.none),
+                                                                onChanged:
+                                                                    (value) {
+                                                                  if (value
+                                                                          .length ==
+                                                                      1) {
+                                                                    FocusScope.of(
+                                                                            context)
+                                                                        .nextFocus();
+                                                                  }
+                                                                },
+                                                                style: Theme.of(
+                                                                        context)
+                                                                    .textTheme
+                                                                    .headlineMedium,
+                                                                keyboardType:
+                                                                    TextInputType
+                                                                        .number,
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                inputFormatters: [
+                                                                  LengthLimitingTextInputFormatter(
+                                                                      1),
+                                                                  FilteringTextInputFormatter
+                                                                      .digitsOnly,
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                       Text(
+                                                        'Password',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 18.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          border: Border.all(
+                                                              color:
+                                                                  kLogoutTextColor),
+                                                          borderRadius:
+                                                               BorderRadius
+                                                                  .all(
+                                                            Radius.circular(14.r),
                                                           ),
-                                                          onPressed: () {},
-                                                          child: const Text(
-                                                            'Reset Password',
-                                                            style: TextStyle(
-                                                              fontSize: 18,
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w600,
+                                                        ),
+                                                        height: 45.h,
+                                                        child: TextField(
+                                                          decoration:
+                                                              InputDecoration(
+                                                            border: InputBorder
+                                                                .none,
+                                                            suffixIcon:
+                                                                IconButton(
                                                               color:
                                                                   kWhiteColor,
+                                                              icon: Icon(
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                                passwardvisible
+                                                                    ? Icons
+                                                                        .visibility_outlined
+                                                                    : Icons
+                                                                        .visibility_off_outlined,
+                                                              ),
+                                                              onPressed: () {
+                                                                setState(
+                                                                  () {
+                                                                    passwardvisible =
+                                                                        !passwardvisible;
+                                                                  },
+                                                                );
+                                                              },
                                                             ),
                                                           ),
+                                                          keyboardType:
+                                                              TextInputType
+                                                                  .visiblePassword,
                                                         ),
-                                                      ],
-                                                    ),
+                                                      ),
+                                                       Text(
+                                                        'Confirm Password',
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 18.sp,
+                                                          fontFamily: 'Poppins',
+                                                          color:
+                                                              kLogoutTextColor,
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          border: Border.all(
+                                                              color:
+                                                                  kLogoutTextColor),
+                                                          borderRadius:
+                                                               BorderRadius
+                                                                  .all(
+                                                            Radius.circular(14.r),
+                                                          ),
+                                                        ),
+                                                        height: 45.h,
+                                                        child: TextField(
+                                                          decoration:
+                                                              InputDecoration(
+                                                            border: InputBorder
+                                                                .none,
+                                                            suffixIcon:
+                                                                IconButton(
+                                                              color:
+                                                                  kWhiteColor,
+                                                              icon: Icon(
+                                                                color:
+                                                                    kLogoutTextColor,
+                                                                passwardvisible
+                                                                    ? Icons
+                                                                        .visibility_outlined
+                                                                    : Icons
+                                                                        .visibility_off_outlined,
+                                                              ),
+                                                              onPressed: () {
+                                                                setState(
+                                                                  () {
+                                                                    passwardvisible =
+                                                                        !passwardvisible;
+                                                                  },
+                                                                );
+                                                              },
+                                                            ),
+                                                          ),
+                                                          keyboardType:
+                                                              TextInputType
+                                                                  .visiblePassword,
+                                                        ),
+                                                      ),
+                                                       SizedBox(
+                                                          height: 15.h),
+                                                      ElevatedButton(
+                                                        style: ElevatedButton
+                                                            .styleFrom(
+                                                          backgroundColor:
+                                                              kPrimaryColor,
+                                                          fixedSize:  Size(
+                                                              335.w, 60.h),
+                                                          shape:
+                                                              RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        12.r),
+                                                          ),
+                                                        ),
+                                                        onPressed: () {},
+                                                        child:  Text(
+                                                          'Reset Password',
+                                                          style: TextStyle(
+                                                            fontSize: 18.sp,
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            fontWeight:
+                                                                FontWeight.w600,
+                                                            color: kWhiteColor,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
-                                                );
-                                              });
-                                        },
-                                        child: const Text(
-                                          'Continue',
-                                          style: TextStyle(
-                                            fontSize: 18,
-                                            fontFamily: 'Poppins',
-                                            fontWeight: FontWeight.w600,
-                                            color: kWhiteColor,
-                                          ),
+                                                ),
+                                              );
+                                            });
+                                      },
+                                      child:  Text(
+                                        'Continue',
+                                        style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontFamily: 'Poppins',
+                                          fontWeight: FontWeight.w600,
+                                          color: kWhiteColor,
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               );
                             },

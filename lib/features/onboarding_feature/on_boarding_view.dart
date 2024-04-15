@@ -5,6 +5,8 @@ import 'package:markiz_elamal_team_12/features/home_view/presentation/views/home
 import 'package:markiz_elamal_team_12/features/onboarding_feature/presentation/widgets/on_boarding_view_body.dart';
 import 'package:markiz_elamal_team_12/features/reservation_feature/presentation/reservation_view.dart';
 
+import '../auth_feature/presentation/sign_in_view.dart';
+
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
 
@@ -35,7 +37,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) {
-                  return const HomeScreen();
+                  return const SignInView();
                 }),
               );
             },

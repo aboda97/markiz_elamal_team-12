@@ -30,8 +30,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 30, left: 30, bottom: 245),
+                   Padding(
+                    padding: EdgeInsets.only(top: 30.h, left: 30.w, bottom: 245.h),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -40,7 +40,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           style: TextStyle(
                             color: kWhiteColor,
                             fontFamily: 'Poppins',
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -49,7 +49,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           style: TextStyle(
                             color: kWhiteColor,
                             fontFamily: 'Poppins',
-                            fontSize: 20,
+                            fontSize: 20.sp,
                             fontWeight: FontWeight.w600,
                           ),
                         ),
@@ -67,30 +67,30 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(
-                        bottom: 15,
-                        left: 70,
+                      padding:  EdgeInsets.only(
+                        bottom: 15.h,
+                        left: 70.w,
                       ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          const Text(
+                           Text(
                             'Have alreadyan account?',
                             style: TextStyle(
                               color: kPrimaryColor,
                               fontFamily: 'Poppins',
-                              fontSize: 12,
+                              fontSize: 12.sp,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                           SizedBox(width: 8.w),
                           InkWell(
-                            child: const Text(
+                            child:  Text(
                               'Sign In',
                               style: TextStyle(
                                 color: kLogoutTextColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
@@ -104,8 +104,8 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
               ),
             ),
             Positioned(
-              bottom: 65,
-              left: 49,
+              bottom: 65.h,
+              left: 49.w,
               child: Container(
                 width: 325.w,
                 height: 630.h,
@@ -126,20 +126,20 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         width: 65.w,
                       ),
                       SizedBox(height: 10.h),
-                      const Text(
+                       Text(
                         'Markaz ElAma',
                         style: TextStyle(
                           color: kWhiteColor,
                           fontWeight: FontWeight.w400,
-                          fontSize: 15,
+                          fontSize: 15.sp,
                           fontFamily: 'Peralta',
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15,
-                          right: 15,
-                          left: 15,
+                        padding:  EdgeInsets.only(
+                          top: 15.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
@@ -148,22 +148,22 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                               Radius.circular(14.r),
                             ),
                           ),
-                          child: const TextField(
+                          child:  TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Padding(
-                                padding: EdgeInsets.only(left: 10),
+                                padding: EdgeInsets.only(left: 10.w),
                                 child: Icon(
                                   CupertinoIcons.person_crop_circle,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
                               hintText: 'Name',
                               hintStyle: TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
@@ -171,10 +171,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15,
-                          right: 15,
-                          left: 15,
+                        padding:  EdgeInsets.only(
+                          top: 15.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
@@ -183,22 +183,22 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                               Radius.circular(14.r),
                             ),
                           ),
-                          child: const TextField(
+                          child:  TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Padding(
-                                padding: EdgeInsets.only(left: 10),
+                                padding: EdgeInsets.only(left: 10.w),
                                 child: Icon(
                                   CupertinoIcons.phone,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
                               hintText: 'Phone number',
                               hintStyle: TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
@@ -206,10 +206,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15,
-                          right: 15,
-                          left: 15,
+                        padding:  EdgeInsets.only(
+                          top: 15.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
@@ -218,22 +218,22 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                               Radius.circular(14.r),
                             ),
                           ),
-                          child: const TextField(
+                          child:  TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
                               icon: Padding(
-                                padding: EdgeInsets.only(left: 10),
+                                padding: EdgeInsets.only(left: 10.w),
                                 child: Icon(
                                   Icons.email_outlined,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
                               hintText: 'Email',
                               hintStyle: TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                             ),
                             keyboardType: TextInputType.emailAddress,
@@ -241,10 +241,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15,
-                          right: 15,
-                          left: 15,
+                        padding:  EdgeInsets.only(
+                          top: 15.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
@@ -256,19 +256,19 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              prefixIcon: const Padding(
-                                padding: EdgeInsets.only(left: 10),
+                              prefixIcon:  Padding(
+                                padding: EdgeInsets.only(left: 10.w),
                                 child: Icon(
                                   Icons.lock_outline_rounded,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
-                              hintText: '   Passward',
-                              hintStyle: const TextStyle(
+                              hintText: '   Password',
+                              hintStyle:  TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                               suffixIcon: IconButton(
                                 color: kWhiteColor,
@@ -289,10 +289,10 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(
-                          top: 15,
-                          right: 15,
-                          left: 15,
+                        padding:  EdgeInsets.only(
+                          top: 15.h,
+                          right: 15.w,
+                          left: 15.w,
                         ),
                         child: Container(
                           decoration: BoxDecoration(
@@ -304,19 +304,19 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              icon: const Padding(
-                                padding: EdgeInsets.only(left: 10),
+                              icon:  Padding(
+                                padding: EdgeInsets.only(left: 10.w),
                                 child: Icon(
                                   Icons.lock_outline_rounded,
                                   color: kWhiteColor,
-                                  size: 35,
+                                  size: 35.sp,
                                 ),
                               ),
-                              hintText: 'Confirm passward',
-                              hintStyle: const TextStyle(
+                              hintText: 'Confirm password',
+                              hintStyle:  TextStyle(
                                 color: kWhiteColor,
                                 fontFamily: 'Poppins',
-                                fontSize: 14,
+                                fontSize: 14.sp,
                               ),
                               suffixIcon: IconButton(
                                 color: kWhiteColor,
@@ -336,7 +336,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 18),
+                       SizedBox(height: 18.h),
                       const BottomDialog(),
                     ],
                   ),

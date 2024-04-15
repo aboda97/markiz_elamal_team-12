@@ -15,46 +15,46 @@ class _WelcomeViewBodyState extends State<WelcomeViewBody> {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, designSize: const Size(428, 926));
 
-    return const Scaffold(
+    return  Scaffold(
       backgroundColor: kWhiteColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 100,
+              radius: 100.r,
               backgroundColor: kPrimaryColor,
               child: Icon(
                 Icons.check,
                 color: kWhiteColor,
-                size: 125,
+                size: 125.sp,
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 30.h),
             Text(
               'Congratulations',
               style: TextStyle(
                 fontWeight: FontWeight.w800,
-                fontSize: 30,
+                fontSize: 30.sp,
                 fontFamily: 'Poppins',
                 color: kLogoutTextColor,
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 15.h),
             Text(
               'Your Registration Is Success',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
-                fontSize: 15,
+                fontSize: 15.sp,
                 color: kLogoutTextColor,
               ),
             ),
-            SizedBox(height: 3),
+            SizedBox(height: 3.h),
             Text(
               'Welcome to our app',
               style: TextStyle(
                 fontWeight: FontWeight.w600,
-                fontSize: 15,
+                fontSize: 15.sp,
                 color: kLogoutTextColor,
               ),
             ),

@@ -15,11 +15,12 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return InkWell(
-      child: const Text(
+      child:  Text(
         'Forgot password ?',
         style: TextStyle(
-          fontSize: 12,
+          fontSize: 12.sp,
           fontFamily: 'Poppins',
           fontWeight: FontWeight.w600,
           color: kWhiteColor,
@@ -37,51 +38,51 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
             return SizedBox(
               height: 440.h,
               child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 40,
-                  left: 30,
+                padding:  EdgeInsets.only(
+                  top: 40.h,
+                  left: 30.w,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(bottom: 15),
+                     Padding(
+                      padding: EdgeInsets.only(bottom: 15.h),
                       child: Text(
                         'Forget Password',
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           fontFamily: 'Poppins',
                           color: kLogoutTextColor,
                         ),
                       ),
                     ),
-                    const Text(
+                     Text(
                       'Enter your email for verification process we',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: kLogoutTextColor,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    const Text(
+                     Text(
                       'will send 5 digits code to your email',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 12.sp,
                         color: kLogoutTextColor,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 20),
+                     Padding(
+                      padding: EdgeInsets.only(top: 20.h),
                       child: Row(
                         children: [
                           Text(
                             'Email',
                             style: TextStyle(
-                              fontSize: 22,
+                              fontSize: 22.sp,
                               color: kLogoutTextColor,
                               fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
@@ -91,9 +92,9 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(
-                        top: 15,
-                        right: 30,
+                      padding:  EdgeInsets.only(
+                        top: 15.h,
+                        right: 30.w,
                       ),
                       child: Container(
                         decoration: BoxDecoration(
@@ -102,15 +103,15 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                             Radius.circular(14.r),
                           ),
                         ),
-                        child: const TextField(
+                        child:  TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             icon: Padding(
-                              padding: EdgeInsets.only(left: 15),
+                              padding: EdgeInsets.only(left: 15.w),
                               child: Icon(
                                 Icons.email_outlined,
                                 color: kPrimaryColor,
-                                size: 35,
+                                size: 35.sp,
                               ),
                             ),
                           ),
@@ -119,11 +120,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 40),
+                      padding:  EdgeInsets.only(top: 40.h),
                       child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                           backgroundColor: kPrimaryColor,
-                          fixedSize: const Size(335, 60),
+                          fixedSize:  Size(335.w, 60.h),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12.r),
                           ),
@@ -141,66 +142,66 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                   height: 600.h,
                                   width: double.infinity,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(
-                                      top: 10,
-                                      left: 30,
-                                      right: 30,
+                                    padding:  EdgeInsets.only(
+                                      top: 10.h,
+                                      left: 30.w,
+                                      right: 30.w,
                                     ),
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        const Text(
+                                         Text(
                                           'Reset Password',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 25,
+                                            fontSize: 25.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'Enter the code you receive in mail and',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: 13,
+                                            fontSize: 13.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'set the new password for your',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: 13,
+                                            fontSize: 13.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'accountso you can login and access',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: 13,
+                                            fontSize: 13.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'all the features',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w400,
-                                            fontSize: 13,
+                                            fontSize: 13.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
                                         ),
                                         SizedBox(height: 10.h),
-                                        const Text(
+                                         Text(
                                           'Enter the 5 digits code',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 18,
+                                            fontSize: 18.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
@@ -396,11 +397,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                             ],
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'Password',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 18,
+                                            fontSize: 18.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
@@ -441,11 +442,11 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                                 TextInputType.visiblePassword,
                                           ),
                                         ),
-                                        const Text(
+                                         Text(
                                           'Confirm Password',
                                           style: TextStyle(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 18,
+                                            fontSize: 18.sp,
                                             fontFamily: 'Poppins',
                                             color: kLogoutTextColor,
                                           ),
@@ -490,17 +491,17 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                         ElevatedButton(
                                           style: ElevatedButton.styleFrom(
                                             backgroundColor: kPrimaryColor,
-                                            fixedSize: const Size(335, 60),
+                                            fixedSize:  Size(335.w, 60.h),
                                             shape: RoundedRectangleBorder(
                                               borderRadius:
                                                   BorderRadius.circular(12.r),
                                             ),
                                           ),
                                           onPressed: () {},
-                                          child: const Text(
+                                          child:  Text(
                                             'Reset Password',
                                             style: TextStyle(
-                                              fontSize: 18,
+                                              fontSize: 18.sp,
                                               fontFamily: 'Poppins',
                                               fontWeight: FontWeight.w600,
                                               color: kWhiteColor,
@@ -513,10 +514,10 @@ class _CustomBottomSheetState extends State<CustomBottomSheet> {
                                 );
                               });
                         },
-                        child: const Text(
+                        child:  Text(
                           'Continue',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 18.sp,
                             fontFamily: 'Poppins',
                             fontWeight: FontWeight.w600,
                             color: kWhiteColor,
