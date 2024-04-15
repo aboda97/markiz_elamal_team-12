@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_colors.dart';
 import 'package:markiz_elamal_team_12/core/utils/app_paths.dart';
 
@@ -11,145 +14,150 @@ class LogoutViewBody extends StatefulWidget {
 
 class _LogoutViewBodyState extends State<LogoutViewBody> {
   @override
-  @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(428, 926));
     return Scaffold(
       body: Center(
         child: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 60, bottom: 15),
+             Padding(
+              padding: EdgeInsets.only(top: 60.h, bottom: 15.h),
               child: Text(
                 "Profile",
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   color: kLogoutTextColor,
-                  fontSize: 24,
+                  fontSize: 24.sp,
                   fontWeight: FontWeight.w700,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20),
+              padding:  EdgeInsets.only(bottom: 20.h),
               child: CircleAvatar(
-                radius: 66,
+                radius: 66.r,
                 backgroundColor: kPrimaryColor,
                 child: Image.asset(
                   AppPaths.logoutImage,
-                  height: 99,
-                  width: 106,
+                  height: 99.h,
+                  width: 106.w,
                 ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.only(bottom: 15),
+             Padding(
+              padding: EdgeInsets.only(bottom: 15.h),
               child: Text(
                 "Ammar Ahmed",
                 style: TextStyle(
                   color: kLogoutTextColor,
                   fontFamily: 'Poppins',
-                  fontSize: 22,
+                  fontSize: 22.sp,
                   fontWeight: FontWeight.w600,
                 ),
               ),
             ),
             Container(
-              height: 370,
-              width: 360,
-
-              decoration: const BoxDecoration(
+              padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
+              margin:  EdgeInsets.symmetric(horizontal: 20.w),
+              decoration:  BoxDecoration(
                 color: kLogoutConColor,
-                borderRadius: BorderRadius.all(Radius.circular(30)),
+                borderRadius: BorderRadius.all(Radius.circular(30.r)),
               ),
               child: Column(
                 children: [
-                  const SizedBox(height: 45),
-                  const Text(
+                   SizedBox(height: 45.h),
+                   Text(
                     'See You Soon',
                     style: TextStyle(
                       fontFamily: 'OleoScriptSwashCaps',
-                      fontSize: 30,
+                      fontSize: 30.sp,
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  const Text(
+                   SizedBox(height: 20.h),
+                   Text(
                     'You are about to logout.',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const Text(
+                   Text(
                     'Are you sure this is what',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const Text(
+                   Text(
                     'you want ?',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'Poppins',
                       fontWeight: FontWeight.w700,
                       color: kWhiteColor,
                     ),
                   ),
-                  const SizedBox(height: 30),
+                   SizedBox(height: 30.h),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      const SizedBox(width: 28),
-                      const Text(
-                        'Cancel',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontFamily: 'Poppins',
-                          fontWeight: FontWeight.w700,
-                          color: kWhiteColor,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(213, 45),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: const Text(
-                          'Confirm logout',
+                       SizedBox(width: 28.w),
+                       Expanded(
+                         flex: 1,
+                         child: Text(
+                          'Cancel',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 18.sp,
                             fontFamily: 'Poppins',
-                            fontWeight: FontWeight.w600,
-                            color: kLogoutTextColor,
+                            fontWeight: FontWeight.w700,
+                            color: kWhiteColor,
+                          ),
+                                               ),
+                       ),
+                       SizedBox(width: 20.w),
+                      Expanded(
+                        flex: 3,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            // fixedSize:  Size(213.w, 45.h),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.r),
+                            ),
+                          ),
+                          onPressed: () {},
+                          child:  Text(
+                            'Confirm logout',
+                            style: TextStyle(
+                              fontSize: 18.sp,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              color: kLogoutTextColor,
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 7),
+                   SizedBox(height: 7.h),
                   Row(
                     children: [
-                      const SizedBox(width: 16),
+                       SizedBox(width: 16.w),
                       Checkbox(
                         activeColor: kWhiteColor,
                         checkColor: kBlackColor,
                         value: true,
                         onChanged: (value) {},
                       ),
-                      const Text(
+                       Text(
                         'Logout from all devices',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontSize: 16.sp,
                           fontFamily: 'Poppins',
                           fontWeight: FontWeight.w500,
                           color: kWhiteColor,

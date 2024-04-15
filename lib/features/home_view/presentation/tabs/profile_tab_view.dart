@@ -4,6 +4,7 @@ import 'package:markiz_elamal_team_12/features/chats_feature/chats_view.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_paths.dart';
+import '../../../logout_feature/presentation/logout_view.dart';
 import '../../../profile_details_feature/profile_details_view.dart';
 import '../../../settings_feature/setting_view.dart';
 import '../widgets/profile_widget.dart';
@@ -77,8 +78,8 @@ class ProfileTabView extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const ProfileDetailsView();
-                      }));
+                            return const ProfileDetailsView();
+                          }));
                     },
                   ),
                   SizedBox(
@@ -88,7 +89,8 @@ class ProfileTabView extends StatelessWidget {
                     icon: Icons.chat_bubble_outline,
                     title: 'Chats',
                     onTap: () {
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => const ChatsView(),));
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => const ChatsView(),));
                     },
                   ),
                   SizedBox(
@@ -100,8 +102,8 @@ class ProfileTabView extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const SettingView();
-                      }));
+                            return const SettingView();
+                          }));
                     },
                   ),
                   SizedBox(
@@ -118,7 +120,10 @@ class ProfileTabView extends StatelessWidget {
                   ProfileWidget(
                     icon: Icons.logout_outlined,
                     title: 'Logout',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => LogoutView(),));
+                    },
                   ),
                 ],
               ),
