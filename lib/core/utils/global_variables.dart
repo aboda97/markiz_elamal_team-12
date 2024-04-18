@@ -25,3 +25,8 @@ List<OnBoardingModel> items = [
 ];
 bool onBoardingIsLast = false;
 ////----> FINISH THOSE VARIABLES
+////----> global variables for http
+String basUrl = "192.168.1.149:5000";
+
+String token =
+    "kokoz eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MWU0N2U1YmMyMmU4OTMwNGY1YTRiZiIsImVtYWlsIjoiYWhzbjUwMDcxQGdtYWlsLmNvbSIsInJvbGUiOiJQYXRpZW50IiwiaWF0IjoxNzEzMjY2MzE4LCJleHAiOjE3MTg0NTAzMTh9.CTY6GG4oHZIqPibj4bP8G8Ana5mbl9RKonCbsCd_O6o";
